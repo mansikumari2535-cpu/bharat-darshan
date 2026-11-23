@@ -14,15 +14,20 @@
 
   <link rel="canonical" href="https://bharat-darshan-az2.pages.dev/">
 
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bharat Darshan">
   <meta property="og:title" content="Bharat Darshan | Indian Culture & Heritage">
   <meta property="og:description" content="Discover India's languages, dances, festivals, food, arts and traditions.">
   <meta property="og:url" content="https://bharat-darshan-az2.pages.dev/">
+  <meta property="og:image" content="https://bharat-darshan-az2.pages.dev/logo.png">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Bharat Darshan | Indian Culture & Heritage">
   <meta name="twitter:description" content="Discover India's languages, dances, festivals, food, arts and traditions.">
+  <meta name="twitter:image" content="https://bharat-darshan-az2.pages.dev/logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,9 +51,17 @@
 </head>
 
 <body>
+
   <header class="site-header">
-    <a class="brand" href="#" aria-label="Bharat Darshan home">
-      <span class="brand-mark" aria-hidden="true">✦</span>
+
+    <a class="brand" href="#home" aria-label="Bharat Darshan home">
+      <img
+        src="logo.png"
+        alt="Bharat Darshan Logo"
+        class="brand-logo"
+        width="48"
+        height="48"
+      >
       <span class="brand-name">Bharat <strong>Darshan</strong></span>
     </a>
 
@@ -56,27 +69,37 @@
       aria-label="Open navigation menu"
       aria-expanded="false"
       aria-controls="mainNav">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
     <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+
       <a href="#home" data-en="Home" data-hi="होम">Home</a>
+
       <a href="#states" data-en="Explore States" data-hi="राज्य देखें">Explore States</a>
+
       <a href="#union-territories" data-en="Union Territories" data-hi="केंद्र शासित प्रदेश">Union Territories</a>
 
       <div class="language-control">
         <label for="languageSelect" data-en="Language" data-hi="भाषा">Language</label>
+
         <select id="languageSelect" aria-label="Choose language">
           <option value="en">English</option>
           <option value="hi">हिन्दी</option>
         </select>
       </div>
+
     </nav>
   </header>
 
   <main>
+
     <section class="hero" id="home">
+
       <div class="hero-content">
+
         <p class="eyebrow"
           data-en="A journey through incredible India"
           data-hi="अद्भुत भारत की एक सांस्कृतिक यात्रा">
@@ -96,18 +119,28 @@
         </p>
 
         <form class="search-form" id="searchForm" role="search">
-          <label class="visually-hidden" for="searchInput">Search Indian culture</label>
 
-          <input id="searchInput" type="search"
+          <label class="visually-hidden" for="searchInput">
+            Search Indian culture
+          </label>
+
+          <input
+            id="searchInput"
+            type="search"
             placeholder="Search a state, dance, language, festival or food..."
             data-placeholder-en="Search a state, dance, language, festival or food..."
             data-placeholder-hi="राज्य, नृत्य, भाषा, त्योहार या भोजन खोजें..."
-            autocomplete="off">
+            autocomplete="off"
+          >
 
-          <button type="submit" data-en="Explore" data-hi="खोजें">Explore</button>
+          <button type="submit" data-en="Explore" data-hi="खोजें">
+            Explore
+          </button>
+
         </form>
 
         <p class="search-hint" id="searchHint" aria-live="polite"></p>
+
       </div>
 
       <div class="hero-decoration" aria-hidden="true">
@@ -115,10 +148,13 @@
         <span class="mandala mandala-two">✧</span>
         <span class="mandala mandala-three">❋</span>
       </div>
+
     </section>
 
     <section class="intro-section">
+
       <div class="section-heading">
+
         <p class="eyebrow"
           data-en="One nation, countless traditions"
           data-hi="एक देश, अनगिनत परंपराएँ">
@@ -136,11 +172,15 @@
           data-hi="किसी राज्य को चुनें और उसकी संस्कृति तथा विरासत को जानना शुरू करें।">
           Choose a state to begin exploring its culture and heritage.
         </p>
+
       </div>
+
     </section>
 
     <section class="directory-section" id="states">
+
       <div class="section-title-row">
+
         <div>
           <p class="eyebrow" data-en="The states" data-hi="भारत के राज्य">
             The states
@@ -154,6 +194,7 @@
         </div>
 
         <span class="item-count" id="stateCount">28 States</span>
+
       </div>
 
       <div class="state-grid" id="stateGrid" aria-live="polite">
@@ -163,11 +204,14 @@
           Loading states...
         </p>
       </div>
+
     </section>
 
     <section class="profile-section" id="stateProfile"
       aria-live="polite" hidden>
+
       <div class="profile-placeholder">
+
         <p class="eyebrow"
           data-en="Discover a region"
           data-hi="एक क्षेत्र को जानें">
@@ -185,11 +229,15 @@
           data-hi="यहाँ उस राज्य का इतिहास, भाषाएँ, नृत्य, त्योहार, भोजन, कला और बहुत कुछ दिखाई देगा।">
           Its history, languages, dances, festivals, food, arts and more will appear here.
         </p>
+
       </div>
+
     </section>
 
     <section class="directory-section union-section" id="union-territories">
+
       <div class="section-title-row">
+
         <div>
           <p class="eyebrow"
             data-en="Beyond the states"
@@ -205,6 +253,7 @@
         </div>
 
         <span class="item-count" id="utCount">8 Territories</span>
+
       </div>
 
       <div class="state-grid ut-grid" id="utGrid" aria-live="polite">
@@ -214,10 +263,13 @@
           Loading union territories...
         </p>
       </div>
+
     </section>
 
     <section class="about-section" id="about">
+
       <div class="about-inner">
+
         <p class="eyebrow"
           data-en="About this project"
           data-hi="इस वेबसाइट के बारे में">
@@ -235,11 +287,15 @@
           data-hi="भारत दर्शन भारत की क्षेत्रीय विरासत को जानना आसान बनाने के लिए बनाई जा रही एक सांस्कृतिक मार्गदर्शिका है। वेबसाइट के विकास के साथ जानकारी को बढ़ाया और जाँचा जा रहा है।">
           Bharat Darshan is a growing cultural guide created to make India's regional heritage easier to discover. Information is being expanded and checked as the site develops.
         </p>
+
       </div>
+
     </section>
+
   </main>
 
   <footer class="site-footer">
+
     <a class="footer-brand" href="#home">Bharat Darshan</a>
 
     <p
@@ -249,6 +305,8 @@
     </p>
 
     <small>© <span id="currentYear">2026</span> Bharat Darshan</small>
+
   </footer>
+
 </body>
 </html>
