@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://bharat-darshan-az2.pages.dev/sitemap.xml
