@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the states, languages, festivals, dances, food, art and traditions of India with Bharat Darshan.">
+  <meta name="theme-color" content="#8f1d1d">
+  <title>Bharat Darshan | Discover India's Culture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Bharat Darshan home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span class="brand-name">Bharat <strong>Darshan</strong></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+      aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#home" data-en="Home" data-hi="होम">Home</a>
+      <a href="#states" data-en="Explore States" data-hi="राज्य देखें">Explore States</a>
+      <a href="#union-territories" data-en="Union Territories" data-hi="केंद्र शासित प्रदेश">Union Territories</a>
+      <div class="language-control">
+        <label for="languageSelect" data-en="Language" data-hi="भाषा">Language</label>
+        <select id="languageSelect" aria-label="Choose language">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow" data-en="A journey through incredible India" data-hi="अद्भुत भारत की एक सांस्कृतिक यात्रा">A journey through incredible India</p>
+        <h1 data-en="Every corner has a story." data-hi="भारत के हर कोने की अपनी कहानी है।">Every corner has a story.</h1>
+        <p class="hero-description"
+          data-en="Discover the languages, festivals, dances, food, art and living traditions that make every region unique."
+          data-hi="भारत के हर क्षेत्र की भाषाओं, त्योहारों, नृत्यों, खान-पान, कला और परंपराओं को जानें।">
+          Discover the languages, festivals, dances, food, art and living traditions that make every region unique.
+        </p>
+
+        <form class="search-form" id="searchForm" role="search">
+          <label class="visually-hidden" for="searchInput">Search Indian culture</label>
+          <input id="searchInput" type="search"
+            placeholder="Search a state, dance, language, festival or food..."
+            data-placeholder-en="Search a state, dance, language, festival or food..."
+            data-placeholder-hi="राज्य, नृत्य, भाषा, त्योहार या भोजन खोजें..."
+            autocomplete="off">
+          <button type="submit" data-en="Explore" data-hi="खोजें">Explore</button>
+        </form>
+        <p class="search-hint" id="searchHint" aria-live="polite"></p>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <span class="mandala mandala-one">✺</span>
+        <span class="mandala mandala-two">✧</span>
+        <span class="mandala mandala-three">❋</span>
+      </div>
+    </section>
+
+    <section class="intro-section">
+      <div class="section-heading">
+        <p class="eyebrow" data-en="One nation, countless traditions" data-hi="एक देश, अनगिनत परंपराएँ">One nation, countless traditions</p>
+        <h2 data-en="Explore the diversity of India" data-hi="भारत की विविधता को जानें">Explore the diversity of India</h2>
+        <p data-en="Choose a state to begin exploring its culture and heritage."
+           data-hi="किसी राज्य को चुनें और उसकी संस्कृति तथा विरासत को जानना शुरू करें।">
+          Choose a state to begin exploring its culture and heritage.
+        </p>
+      </div>
+    </section>
+
+    <section class="directory-section" id="states">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow" data-en="The states" data-hi="भारत के राज्य">The states</p>
+          <h2 data-en="Explore all 28 states" data-hi="सभी 28 राज्य देखें">Explore all 28 states</h2>
+        </div>
+        <span class="item-count" id="stateCount">28 States</span>
+      </div>
+      <div class="state-grid" id="stateGrid" aria-live="polite">
+        <p class="loading-message" data-en="Loading states..." data-hi="राज्यों की सूची लोड हो रही है...">Loading states...</p>
+      </div>
+    </section>
+
+    <section class="profile-section" id="stateProfile" aria-live="polite" hidden>
+      <div class="profile-placeholder">
+        <p class="eyebrow" data-en="Discover a region" data-hi="एक क्षेत्र को जानें">Discover a region</p>
+        <h2 data-en="Select a state to explore" data-hi="जानने के लिए एक राज्य चुनें">Select a state to explore</h2>
+        <p data-en="Its history, languages, dances, festivals, food, arts and more will appear here."
+           data-hi="यहाँ उस राज्य का इतिहास, भाषाएँ, नृत्य, त्योहार, भोजन, कला और बहुत कुछ दिखाई देगा।">
+          Its history, languages, dances, festivals, food, arts and more will appear here.
+        </p>
+      </div>
+    </section>
+
+    <section class="directory-section union-section" id="union-territories">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow" data-en="Beyond the states" data-hi="राज्यों से आगे">Beyond the states</p>
+          <h2 data-en="Union Territories" data-hi="केंद्र शासित प्रदेश">Union Territories</h2>
+        </div>
+        <span class="item-count" id="utCount">8 Territories</span>
+      </div>
+      <div class="state-grid ut-grid" id="utGrid" aria-live="polite">
+        <p class="loading-message" data-en="Loading union territories..." data-hi="केंद्र शासित प्रदेशों की सूची लोड हो रही है...">Loading union territories...</p>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-inner">
+        <p class="eyebrow" data-en="About this project" data-hi="इस वेबसाइट के बारे में">About this project</p>
+        <h2 data-en="A living map of India's culture." data-hi="भारत की जीवंत संस्कृति का एक मानचित्र।">A living map of India's culture.</h2>
+        <p data-en="Bharat Darshan is a growing cultural guide created to make India's regional heritage easier to discover. Information is being expanded and checked as the site develops."
+           data-hi="भारत दर्शन भारत की क्षेत्रीय विरासत को जानना आसान बनाने के लिए बनाई जा रही एक सांस्कृतिक मार्गदर्शिका है। वेबसाइट के विकास के साथ जानकारी को बढ़ाया और जाँचा जा रहा है।">
+          Bharat Darshan is a growing cultural guide created to make India's regional heritage easier to discover. Information is being expanded and checked as the site develops.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home">Bharat Darshan</a>
+    <p data-en="Celebrating the many cultures of India." data-hi="भारत की अनेक संस्कृतियों का उत्सव।">Celebrating the many cultures of India.</p>
+    <small>© <span id="currentYear">2026</span> Bharat Darshan</small>
+  </footer>
+</body>
+</html>
