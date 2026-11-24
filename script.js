@@ -1150,6 +1150,24 @@ function createCard(region) {
     ? labels[currentLanguage].state
     : labels[currentLanguage].ut;
 
+  function createCard(region) {
+  const category = region.type === "state"
+    ? labels[currentLanguage].state
+    : labels[currentLanguage].ut;
+
+  const specialSlugs = {
+    "Dadra and Nagar Haveli and Daman and Diu":
+      "dadra-nagar-haveli-daman-diu",
+    "Jammu and Kashmir": "jammu-kashmir"
+  };
+
+  const slug = specialSlugs[region.name] ||
+    region.name.toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+
+  const pageUrl = `${slug}.html`;
+
   return `
     <article class="state-card">
       <div class="state-card-content">
@@ -1158,16 +1176,15 @@ function createCard(region) {
         <p><strong>${labels[currentLanguage].capital}:</strong>
           ${escapeHTML(getText(region, "capital"))}</p>
         <p>${escapeHTML(getText(region, "speciality"))}</p>
-        <button
+        <a
           class="explore-btn"
-          type="button"
-          data-region="${escapeHTML(region.name)}">
+          href="${escapeHTML(pageUrl)}">
           ${labels[currentLanguage].explore}
-        </button>
+        </a>
       </div>
     </article>
   `;
-}
+  }
 
 function renderDirectory(type, query = "") {
   const grid = document.getElementById(
